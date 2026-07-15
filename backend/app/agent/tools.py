@@ -11,8 +11,7 @@ entity extraction, which is the whole point of using LangGraph here.
 """
 from datetime import datetime
 from typing import Optional, List
-from langchain_core.tools import tool That satisfies the assignment's requirement
-that tool use be driven by LangGraph + an LLM, not hard-coded logic.
+from langchain_core.tools import tool 
 from sqlalchemy.orm import Session
 
 from app.models.models import HCP, Interaction, SentimentEnum, InteractionTypeEnum
