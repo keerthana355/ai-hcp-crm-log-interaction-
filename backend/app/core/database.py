@@ -2,8 +2,7 @@
 Database connection setup.
 
 We use SQLAlchemy as the ORM, connecting to MySQL via the PyMySQL
-driver. (PostgreSQL is also allowed by the assignment and would work
-here too — just swap DATABASE_URL — but this project targets MySQL.)
+driver.
 """
 import os
 from sqlalchemy import create_engine

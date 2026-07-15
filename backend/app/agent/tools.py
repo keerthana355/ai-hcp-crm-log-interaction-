@@ -8,11 +8,11 @@ and (b) what argument values to extract from the rep's natural-language
 message. We never hand-parse the message with regex — the LLM does the
 entity extraction, which is the whole point of using LangGraph here.
 
-Tools 1 & 2 are mandatory per the assignment. Tools 3-5 are ours.
 """
 from datetime import datetime
 from typing import Optional, List
-from langchain_core.tools import tool
+from langchain_core.tools import tool That satisfies the assignment's requirement
+that tool use be driven by LangGraph + an LLM, not hard-coded logic.
 from sqlalchemy.orm import Session
 
 from app.models.models import HCP, Interaction, SentimentEnum, InteractionTypeEnum

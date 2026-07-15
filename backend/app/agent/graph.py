@@ -5,8 +5,7 @@ wired into LangGraph's prebuilt ReAct-style agent graph.
 Why `create_react_agent`? It's LangGraph's own scaffold for exactly
 this pattern: LLM decides which tool(s) to call and with what
 arguments -> tools execute -> LLM sees results -> LLM crafts the final
-natural-language reply. That satisfies the assignment's requirement
-that tool use be driven by LangGraph + an LLM, not hard-coded logic.
+natural-language reply.
 """
 import os
 from dotenv import load_dotenv

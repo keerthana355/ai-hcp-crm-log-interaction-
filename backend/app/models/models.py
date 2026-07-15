@@ -1,24 +1,6 @@
 """
 Database schema (SQLAlchemy ORM models) — simplified 3-table design.
 
-Design notes (useful to explain in your interview):
-
-- We deliberately keep this to 3 tables instead of over-normalizing.
-  The assignment is graded on the AI AGENT driving the form, not on
-  database normalization — so `materials_shared`, `samples_distributed`,
-  and `follow_up_actions` are stored as JSON columns directly on the
-  `interactions` row instead of separate join tables. Each LangGraph
-  tool then only ever touches ONE row, which keeps the tool code
-  simple and easy to demo/explain.
-
-- HCP is still its own table (not just a name field on Interaction)
-  because one HCP has MANY interactions over time — this is exactly
-  what the `search_interaction_history` tool queries against.
-
-- `compliance_note` is a plain nullable text field. The
-  `flag_compliance_risk` tool WRITES to it but the rep's own logged
-  fields (topics, sentiment, etc.) are never touched by that tool —
-  it only ever appends its own note.
 """
 from sqlalchemy import (
     Column, Integer, String, Text, DateTime, ForeignKey, Enum, JSON
