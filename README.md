@@ -165,7 +165,22 @@ mysql -u hcp_app -p hcp_crm -e "SHOW TABLES;"
 
 In a new terminal (keep the backend running):
 
-```bash
+```bashVisit **http://localhost:5173**, register a rep account, log in, and you'll
+see the split-pane screen — form on the left, AI Assistant on the right.
+
+---
+
+## 7. Test login
+
+No seed accounts exist — register one via the app itself:
+
+- Name: `Demo Rep`
+- Email: `demo@hcp-crm.com`
+- Password: `DemoPass@123`
+
+Use these same credentials to log back in on future runs.
+
+---
 cd frontend
 npm install
 npm run dev
@@ -176,7 +191,20 @@ see the split-pane screen — form on the left, AI Assistant on the right.
 
 ---
 
-## 7. Project structure
+
+## 7. Test login
+
+No seed accounts exist — register one via the app itself:
+
+- Name: `Demo Rep`
+- Email: `demo@hcp-crm.com`
+- Password: `DemoPass@123`
+
+Use these same credentials to log back in on future runs.
+
+---
+
+## 8. Project structure
 
 ```
 hcp-crm/
@@ -204,7 +232,7 @@ hcp-crm/
 
 ---
 
-## 8. Database schema
+## 9. Database schema
 
 | Table | Purpose |
 |---|---|
@@ -214,7 +242,7 @@ hcp-crm/
 
 ---
 
-## 9. How the agent works
+## 10. How the agent works
 
 - The frontend sends each chat message to `POST /api/agent/chat` with a `conversation_id`.
 - The backend builds a LangGraph ReAct agent (`langgraph.prebuilt.create_react_agent`) with a Groq LLM bound to the 5 tools.
@@ -225,7 +253,7 @@ hcp-crm/
 
 ---
 
-## 10. Testing
+## 11. Testing
 
 With both servers running, log in and try:
 
